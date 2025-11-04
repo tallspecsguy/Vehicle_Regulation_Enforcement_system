@@ -14,8 +14,8 @@ mail_conf = ConnectionConfig(
     USE_CREDENTIALS=True
 )
 
-# Async mail sending function
 async def send_violation_email(email: EmailStr, subject: str, body: str):
+    print(f"Sending mail to {email}...") 
     message = MessageSchema(
         subject=subject,
         recipients=[email],
